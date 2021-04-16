@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #1b1818;
+  --secondary-color: orange;
+  --font-color: #333333;
+  --font-white: white;
+  --line-height: 1.3;
+  --font-title: 60px;
+  --container: 700px;
+  --font-content: 20px;
+  --text-container: 400px;
+  --text-space: 0.5px;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: var(--font-color);
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--font-title);
+}
+
+p {
+  line-height: var(--line-height);
+}
+
+i {
+  font-size: 25px;
+  margin-top: 20px;
+  opacity: 0.6;
+}
+
+.upper_text {
+  margin-bottom: 40px;
+}
+
+.hero_container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("bg1.jpg") center/cover no-repeat fixed;
+  height: 100vh;
+}
+
+.content {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-10%, -50%);
+  max-width: var(--container);
+  color: var(--font-white);
+  opacity: 0.7;
+}
+
+.text_content {
+  max-width: var(--text-container);
+  font-size: var(--font-content);
+  letter-spacing: var(--text-space);
+}
+
+/*
+=======
+About me section
+========
+*/
+.aboutMe {
+  display: flex;
+  grid-gap: 30px;
+}
+
+.aboutMe p {
+  font-size: 20px;
+}
+
+.about_content {
+  padding-top: 150px;
+  height: 400px;
+  width: 500px
+}
+
+.aboutMe_img {
+  margin-top: 150px;
+  height: 450px;
+  width: 400px;
+  background: url("case4.jpg") center/cover no-repeat;
+  z-index: -99
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  height: 100vh;
+}
+
+.darkmode{
+  background: #FFF5F5
+}
+.products {
+  text-align: center;
+  margin: auto;
+}
+.product_title{
+padding-top: 90px
+}
+.products p {
+  max-width: 600px;
+  margin: auto;
+  font-size: var(--font-content)
+}
+
+.images {
+  height: 320px;
+  width: 250px;
+  padding-left: 20px;
+  padding-top: 50px
+}
+
+.collection {
+  font-size: var(--font-content)
+}
+
+.collection h1{
+  padding-top: 90px
+}
+
+.collection_img {
+  background: url("promo2.jpg") center/cover no-repeat;
+  height: 350px;
+  position: relative;
+}
+
+.collection_text {
+  width: 350px;
+  font-weight: lighter;
+  position: absolute;
+  top: 60%;
+  background: var(--font-color);
+  color: white;
+  padding: 20px 20px;
+  font-size: 14px;
+  left: 50%
+}
+
+.footer {
+  background: var(--font-color);
+  height: 250px;
+  color: var(--font-white)
+}
+
+.footer_container {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+}
