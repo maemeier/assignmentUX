@@ -83,7 +83,7 @@ Hero section
 */
 .hero_container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-    url("bg1.jpg") center/cover no-repeat fixed;
+    url("asset/bg1.jpg") center/cover no-repeat fixed;
   height: 100vh;
 }
 
@@ -132,7 +132,7 @@ About me section
   margin-top: 150px;
   height: 450px;
   width: 400px;
-  background: url("case4.jpg") center/cover no-repeat;
+  background: url("asset/case4.jpg") center/cover no-repeat;
   z-index: -99
 }
 
@@ -191,11 +191,11 @@ Collection section
 }
 
 .box1{
-  background: url("case3.jpg") center/cover no-repeat;
+  background: url("asset/case3.jpg") center/cover no-repeat;
 }
 
 .box2{
-  background: url("promo2.jpg") center/cover no-repeat;
+  background: url("asset/promo2.jpg") center/cover no-repeat;
 }
 
 .box3{
