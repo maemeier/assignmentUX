@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #1b1818;
   --secondary-color: orange;
@@ -16,6 +20,7 @@ body {
   padding: 0;
   margin: 0;
   color: var(--font-color);
+  min-height: 200vh;
 }
 
 h1 {
@@ -28,17 +33,45 @@ p {
 }
 
 i {
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 20px;
+  padding-left: 15px;
   opacity: 0.6;
 }
 
+
+nav{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 5vh;
+  background: #FFF5F5;
+  z-index: 99
+}
+
+
+.nav_links{
+  display: flex;
+  justify-content: space-around;
+  width: 26%
+}
+.nav_links li {
+  list-style: none;
+}
+
+.nav_links a{
+  text-decoration: none;
+  color: black
+
+}
 .upper_text {
   margin-bottom: 40px;
 }
 
 .hero_container {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
     url("bg1.jpg") center/cover no-repeat fixed;
   height: 100vh;
 }
@@ -124,13 +157,26 @@ padding-top: 90px
 .collection h1{
   padding-top: 90px
 }
-
-.collection_img {
-  background: url("promo2.jpg") center/cover no-repeat;
-  height: 350px;
-  position: relative;
+.boxes{
+  height: 300px;
+display: grid;
+  grid-template-columns: 2fr 1fr 1fr ;
+  grid-gap: 10px
 }
 
+.box1{
+  background: url("case3.jpg") center/cover no-repeat;
+}
+
+.box2{
+  background: url("promo2.jpg") center/cover no-repeat;
+}
+
+.box3{
+
+text-align: right;
+margin-top: 20px
+}
 .collection_text {
   width: 350px;
   font-weight: lighter;
@@ -144,7 +190,7 @@ padding-top: 90px
 }
 
 .footer {
-  background: var(--font-color);
+  background: linear-gradient(90deg, rgba(37,36,36,1) 1%, rgba(25,28,3,1) 100%);
   height: 250px;
   color: var(--font-white)
 }
