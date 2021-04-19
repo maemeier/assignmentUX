@@ -41,7 +41,9 @@ i {
   opacity: 0.6;
 }
 
-
+a{
+  color: var(--font-white)
+}
 nav{
   position: fixed;
   width: 100%;
