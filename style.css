@@ -6,14 +6,17 @@ html {
   --primary-color: #1b1818;
   --secondary-color: #FFF5F5;
   --font-color: #333333;
+  --white: white;
   --font-white: white;
   --line-height: 1.4;
   --line-height-title: 1.2;
   --font-title: 35px;
+  --font-secondBreakPoint: 22px;
   --container: 700px;
   --font-content: 18px;
   --text-container: 400px;
   --text-space: 0.5px;
+  --transition: 0.2s
 }
 
 body {
@@ -40,36 +43,35 @@ i {
   opacity: 0.6;
 }
 
-h2{
-  margin:  0
+h2 {
+  margin: 0
 }
-a {
-  color:black;
-  text-decoration: none;
 
+a {
+  color: black;
+  text-decoration: none;
 }
-ul{
+
+ul {
   list-style-type: none;
   padding: 0
 }
 
-
-
 /*
 =======
-navigation section
+navigation section done
 ========
 */
-
-.navbar{
+.navbar {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 100;
+  /* background: var(--font-white); */
+  color: var(--font-color);
   background: white;
-  color: black
-
+  margin: 0;
 }
 
 .nav_center {
@@ -77,45 +79,56 @@ navigation section
   max-width: 1170px;
   margin: 0 auto;
 }
+
 .nav_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  padding: 0 2rem;
 }
 
-.nav_toggle{
-  background: transparent;
-  transition: 0.2s
+.logo {
+  font-size: 20px
 }
-.icon{
+
+.icon {
   margin: 0;
   padding: 0
 }
-.nav_link{
+
+.nav_toggle {
+  background: transparent;
+  transition: var(--transition)
+}
+
+.nav_link {
   display: block;
   padding: 1rem 2rem;
   text-transform: uppercase;
-  transition: 0.2s;
+  transition: var(--transition);
   cursor: pointer;
-  font-size: 1rem;
+  height: 100%
+
 }
 
-.nav_link:hover{
-  background: pink;
+.nav_link:hover {
+  background: var(--secondary-color);
   padding-left: 2.25rem
 }
 
-.nav_links{
-  height: 0;
+.nav_links {
+  height: 0px;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  transition: 0.2s
+  transition: var(--transition);
 }
-.show_links{
-  height: 500px;
-  background: white
 
+.show_links {
+  height:100vh;
+  background: var(--white)
 }
+
 /*=======
 Hero section
 ========
@@ -123,7 +136,7 @@ Hero section
 .hero_container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
     url("asset/bg1.jpg") center/cover no-repeat fixed;
-  height: 100vh;
+  height: 100vh
 }
 
 .content {
@@ -145,14 +158,12 @@ Hero section
 
 @media screen and (min-width: 700px) {
   .content {
-    margin: auto;
-    position: absolute;
     max-width: 650px;
   }
 
   .text_content {
     max-width: 650px;
-    font-size: 22px;
+    font-size: var(--font-secondBreakPoint)
   }
 }
 
@@ -178,7 +189,7 @@ About me section
 .container {
   max-width: 330px;
   margin: auto;
-  font-size: 18px
+  font-size: var(--font-content)
 }
 
 .aboutMe {
@@ -396,8 +407,7 @@ Collection section
     position: absolute;
     top: 60%;
     background: var(--font-color);
-    color: white;
-    padding: 20px 20px;
+    color: var(--white) padding: 20px 20px;
     font-size: 14px;
     left: 50%
   }
