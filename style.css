@@ -61,28 +61,27 @@ navigation section
 ========
 */
 
-nav{
+.navbar{
   position: fixed;
   top:0;
   left:0;
   width: 100%;
-  background: white;
   z-index: 100;
-  padding:  0;
-  height: auto;
+  background: white;
+  color: black
 
 }
 
-.nav_center{
+.nav_center {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
 }
-.nav_header{
+.nav_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem
+  
 }
 
 .nav_toggle{
@@ -113,7 +112,9 @@ nav{
   transition: 0.2s
 }
 .show_links{
-  height: 280px
+  height: 500px;
+  background: white
+
 }
 /*=======
 Hero section
