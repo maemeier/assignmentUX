@@ -21,7 +21,6 @@ body {
   padding: 0;
   margin: 0;
   color: var(--font-color);
-
 }
 
 h1 {
@@ -41,50 +40,82 @@ i {
   opacity: 0.6;
 }
 
-a{
-  color: var(--font-white)
+h2{
+  margin:  0
 }
-nav{
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 5vh;
+a {
+  color:black;
+  text-decoration: none;
+
+}
+ul{
+  list-style-type: none;
+  padding: 0
+}
 
 
-  color: var(--font-white)
-}
-nav.sticky{
-background: pink;
-z-index: 99
-}
+
 /*
 =======
 navigation section
 ========
 */
-/* .nav_links{
+
+nav{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  padding:  0;
+  height: auto;
+
+}
+
+.nav_center{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav_header{
   display: flex;
-  justify-content: space-around;
-  width: 26%
-}
-.nav_links li {
-  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem
 }
 
-.nav_links a{
-  text-decoration: none;
-  color: var(--font-white)
-
+.nav_toggle{
+  background: transparent;
+  transition: 0.2s
 }
-.upper_text {
-  margin-bottom: 40px;
-} */
+.icon{
+  margin: 0;
+  padding: 0
+}
+.nav_link{
+  display: block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
+.nav_link:hover{
+  background: pink;
+  padding-left: 2.25rem
+}
 
-/*
-=======
+.nav_links{
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s
+}
+.show_links{
+  height: 280px
+}
+/*=======
 Hero section
 ========
 */
@@ -111,21 +142,17 @@ Hero section
   letter-spacing: var(--text-space);
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   .content {
     margin: auto;
     position: absolute;
     max-width: 650px;
-    color: var(--font-white);
-    opacity: 0.7;
   }
 
   .text_content {
     max-width: 650px;
-    font-size:22px;
-    letter-spacing: var(--text-space);
+    font-size: 22px;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -147,41 +174,42 @@ Hero section
 About me section
 ========
 */
-.container{
+.container {
   max-width: 330px;
   margin: auto;
   font-size: 18px
 }
-.aboutMe{
+
+.aboutMe {
   margin-top: 90px
 }
-.aboutMe_img{
-height: 400px;
-background: url("asset/case4.jpg") center/cover no-repeat;
-margin-bottom: 90px;
-margin-top: 40px
-}
 
-@media screen and (min-width: 700px){
-
-  .aboutMe_img{
+.aboutMe_img {
   height: 400px;
   background: url("asset/case4.jpg") center/cover no-repeat;
   margin-bottom: 90px;
-  margin-top: 40px;
-  position: relative;
+  margin-top: 40px
+}
 
+@media screen and (min-width: 700px) {
+  .aboutMe_img {
+    height: 400px;
+    background: url("asset/case4.jpg") center/cover no-repeat;
+    margin-bottom: 90px;
+    margin-top: 40px;
+    position: relative;
   }
-  .container{
+
+  .container {
     max-width: 600px;
     margin: auto;
     font-size: 18px;
     position: relative;
   }
-  .about_content{
+
+  .about_content {
     margin-top: 70px
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -196,7 +224,7 @@ margin-top: 40px
     width: 500px
   }
 
-  .about_content p{
+  .about_content p {
     max-width: 400px
   }
 
@@ -204,13 +232,12 @@ margin-top: 40px
     margin-top: 150px;
     height: 450px;
     width: 400px;
-
   }
+
   .container {
     max-width: 900px;
-     height: 100vh;
+    height: 100vh;
   }
-
 }
 
 /*
@@ -218,16 +245,19 @@ margin-top: 40px
 Products section
 ========
 */
-.darkmode{
+.darkmode {
   background: var(--secondary-color)
 }
+
 .products {
   text-align: center;
   margin: auto;
 }
-.product_title{
-padding-top: 90px
+
+.product_title {
+  padding-top: 90px
 }
+
 .products p {
   max-width: 600px;
   margin: auto;
@@ -239,37 +269,40 @@ padding-top: 90px
   width: 250px;
   padding-top: 50px
 }
-.product-images{
+
+.product-images {
   padding-bottom: 90px
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   .images {
     height: 190px;
     width: 150px;
     padding-top: 50px
   }
-  .darkmode{
+
+  .darkmode {
     height: 600px
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .darkmode{
-
+  .darkmode {
     height: 100vh
   }
+
   .products {
     text-align: center;
     margin: auto;
   }
-  .product_title{
-  padding-top: 90px
+
+  .product_title {
+    padding-top: 90px
   }
+
   .products p {
     max-width: 600px;
     margin: auto;
-
   }
 
   .images {
@@ -289,28 +322,29 @@ Collection section
   font-size: var(--font-content)
 }
 
-.collection h1{
+.collection h1 {
   padding-top: 90px
 }
 
-.box1{
+.box1 {
   background: url("asset/case3.jpg") center/cover no-repeat;
   height: 300px
 }
 
-.box2{
+.box2 {
   background: url("asset/promo2.jpg") center/cover no-repeat;
-    height: 300px;
-    margin-top: 30px
+  height: 300px;
+  margin-top: 30px
 }
 
-.box3{
-text-align: left;
-font-size: 16px;
-margin: 30px 0px 90px
+.box3 {
+  text-align: left;
+  font-size: 16px;
+  margin: 30px 0px 90px
 }
-.line{
-}
+
+.line {}
+
 .collection_text {
   width: 350px;
   font-weight: lighter;
@@ -328,36 +362,33 @@ margin: 30px 0px 90px
     font-size: var(--font-content)
   }
 
-  .collection h1{
-    padding-top: 90px
+  .collection h1 {
+    padding-top: 150px
   }
-  .boxes{
+
+  .boxes {
     height: 300px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr ;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 10px
   }
 
-
-
-  .box2{
-    background: url("asset/promo2.jpg") center/cover no-repeat;
+  .box2 {
     margin-top: 0px
-
   }
 
-  .box3{
-  text-align: left;
-  font-size: 16px;
-  margin: 0px
+  .box3 {
+    text-align: left;
+    font-size: 16px;
+    margin: 0px
   }
-  .line{
+
+  .line {
     background: var(--font-color);
     height: 180px;
     width: 3px;
-
-
   }
+
   .collection_text {
     width: 350px;
     font-weight: lighter;
@@ -377,10 +408,9 @@ footer section done
 ========
 */
 .footer {
-  background: linear-gradient(90deg, rgba(37,36,36,1) 1%, rgba(25,28,3,1) 100%);
+  background: linear-gradient(90deg, rgba(37, 36, 36, 1) 1%, rgba(25, 28, 3, 1) 100%);
   height: 450px;
   color: var(--font-white);
-
 }
 
 .footer_container {
@@ -389,14 +419,13 @@ footer section done
   padding-top: 50px;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   .footer_container {
     max-width: 600px;
-
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .footer {
     height: 250px;
   }
@@ -406,6 +435,5 @@ footer section done
     padding-top: 50px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-
   }
 }
